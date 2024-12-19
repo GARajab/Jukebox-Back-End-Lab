@@ -1,16 +1,10 @@
 const mongoose = require("mongoose")
 
-const petSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  age: {
-    type: Number,
-    min: 0,
-  },
-  breed: String,
+const jukeBoxSchema = mongoose.Schema({
+  title: { type: String, require: true },
+  artist: { type: String, require: true },
 })
 
-const Pet = mongoose.model("Pet", petSchema)
-module.exports = Pet
+const jukeBox = mongoose.model("jukeBox", jukeBoxSchema)
+
+module.exports = jukeBox

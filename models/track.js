@@ -1,10 +1,10 @@
 const mongoose = require("mongoose")
 
-const jukeBoxSchema = mongoose.Schema({
+const tracksSchema = mongoose.Schema({
   title: { type: String, require: true },
   artist: { type: String, require: true },
 })
 
-const jukeBox = mongoose.model("jukeBox", jukeBoxSchema)
+const Track = mongoose.model("Track", tracksSchema)
 
-module.exports = jukeBox
+module.exports = Track
